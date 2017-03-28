@@ -1,0 +1,21 @@
+* {margin: 0;padding: 0;  }
+body { font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;  font-size:14px;  }
+.container {  width:300px;  height:200px;  position: absolute;  margin:auto;  top:0;  left:0;  right:0;  bottom:0;  border:1px solid #efefef;  }
+.pseudo-box,.sprite-box{  margin:0 auto;  padding: 20px;  }
+.pseudo-box .checkbox, .pseudo-box .radio ,.sprite-box .checkbox, .sprite-box .radio {  position: relative;  display: inline-block;  }
+input {  opacity: 0;  filter:alpha(opacity=0);  } /*兼容性*/
+/**伪元素实现   样式属性改变*/
+input[name="pseudo"]+label {  width: 15px;  height: 15px;  position: absolute;  left: -3px;  top: 3px;  border: 1px solid #CCCCCC;  border-radius: 3px;  cursor: pointer;  }
+input[name="pseudo"]:checked+label {  border:1px solid #d73d32;  }
+input[name="pseudo"]:checked+label::after {  content: '\2714';  color: red;  position: absolute;  left: 2px;  top: -2px;  font-size: 14px;  }
+#mansex+label, #womansex+label {  width: 15px;  height: 15px;  position: absolute;  left: 0;  top: 3px;  border: 1px solid #CCCCCC; border-radius: 100%;  cursor: pointer;  }
+#womansex+label {  left: 18px;  }
+#mansex:checked+label, #womansex:checked+label {  border:1px solid #d73d32;  }
+#mansex:checked+label::before, #womansex:checked+label::before {  content: '';  width: 8px;  height: 8px;  background: #d73d32; border-radius: 100%;  position: absolute;  left: 4px;  top: 4px;
+}
+/** 雪碧图实现 雪碧图的未位置变化 */
+input[name="spriteCheck"]+label, input[name="spriteradio"]+label{  width: 16px;  height: 16px;  border: none;  display: inline-block;  background: url('../img/bg.png') no-repeat;  cursor: pointer;  }
+input[name="spriteCheck"]+label {  background-position: -25px -32px;  }
+input[name="spriteradio"]+label {  background-position: -24px -10px; }
+input[name="spriteCheck"]:checked+label {  background-position: -60px -32px;  }
+input[name="spriteradio"]:checked+label {  background-position: -59px -10px;  }
