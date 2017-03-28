@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css-collapse</title>
+</head>
+<style type="text/css">
+    .panel-group{
+        width:500px;
+        margin:0 auto;
+    }
+    label{
+        height: 50px;
+        display:block;
+        line-height:50px;
+        font-size:15px;
+        text-indent: 20px;
+        color: #333;
+        background-color: #f5f5f5;
+        border-color: #ddd;
+        font-family: "Microsoft yahei";
+    }
+    label:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    .panel{
+        border:1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 0 2px #ccc;
+        margin-bottom: 5px;
+        overflow:hidden;
+        height:50px;
+        transition: height 0.5s;
+    }
+    input{
+        display:none;
+    }
+    .panel::after{
+        content:"Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.";
+        display:block;
+        padding:20px;
+        background-color: #fff;
+    }
+    input:checked+.panel{
+        height:150px;
+    }
+</style>
+<body>
+<div class="panel-group">
+    <input id="radio1" type="radio" name="radioinput">
+    <div class="panel">
+        <label for="radio1">Collapsible Group Item #1</label>
+    </div>
+    <input id="radio2" type="radio" name="radioinput">
+    <div class="panel">
+        <label for="radio2">Collapsible Group Item #2</label>
+    </div>
+    <input id="radio3" type="radio" name="radioinput">
+    <div class="panel">
+        <label for="radio3">Collapsible Group Item #3</label>
+    </div>
+</div>
+</body>
+</html>

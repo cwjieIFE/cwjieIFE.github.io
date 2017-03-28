@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="keywords" content=""/>
+    <meta name="author" content="ZhangWeiJian"/>
+</head>
+<body>
+<div style="font-size: 30px;font-weight: bold;margin-top:200px;text-align: center">动态数据绑定</div>
+<div style="font-size: 30px;font-weight: bold;margin-top:200px;text-align: center">查看控制台</div>
+<script type="text/javascript">
+    function observer(data){
+        this.data = data;
+        this.walk(data);
+    }
+    observer.prototype = {
+        walk:function(data){
+            for(var key in data){
+                this.convert(key,data[key]);
+            }
+        },
+        convert:function(key,val){
+            Object.defineProperty(this.data,key,{
+                get:function(){
+                    console.log('你访问了'+key);
+                    return val;
+                },
+                set:function(newVal){
+                    console.log('你设置了' + key+',新的' + key + '值为 ' + newVal);
+                    val = newVal;
+                }
+            })
+        }
+    };
+    let app1 = new observer({
+        name: 'youngwind',
+        age: 25
+    });
+
+    let app2 = new observer({
+        university: 'bupt',
+        major: 'computer'
+    });
+
+    // 要实现的结果如下：
+    app1.data.name // 你访问了 name
+    app1.data.age = 100;  // 你设置了 age，新的值为100
+    app2.data.university // 你访问了 university
+    app2.data.major = 'science'  // 你设置了 major，新的值为 science
+</script>
+</body>
+</html>

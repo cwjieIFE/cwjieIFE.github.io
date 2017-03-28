@@ -1,0 +1,48 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+#context{
+    width:600px;
+    height:200px;
+    background:#eee;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px #888888;
+    font-size:25px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 200px;
+}
+#RightMenu
+{
+    position: absolute;
+    display: none;
+    width: 200px;
+    padding: 2px 0;
+    cursor: default;
+    border: 1px solid #ccc;
+    -webkit-box-shadow:0px 10px 10px rgba(0,0,0,0.5);box-shadow:0px 10px 10px rgba(0,0,0,0.5);
+    z-index: 9999;
+    background:#fff;
+}
+li
+{
+    font-size: 13px;
+    line-height: 25px;
+    height: 25px;
+    list-style: none;
+    text-indent: 1.5em;
+    color: #000;
+}
+li:hover
+{
+    background-color: #63A8F5;
+    color:#fff;
+}
+.Menuright
+{
+    float: right;
+    margin-right: 1.5em;
+
+}
