@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        * { margin: 0; padding: 0;}
+        body {background-color: #fff;}
+        div {
+            border: 1px solid #000;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+        }
+        .four {
+            width: 20%;
+            height: 90%;
+            margin: 20px;
+        }
+        .three {
+            width: 38%;
+            height: 90%;
+            margin: 20px;
+        }
+        .two {
+            width: 45%;
+            height: 90%;
+            margin: 20px;
+        }
+        .one {
+            width: 1000px;
+            height: 300px;
+            margin: 20px auto;
+        }
+        .title{
+            background:#eee;
+        }
+        .btn-list{
+            text-align: center;
+        }
+    </style>
+    <title>任务七：JavaScript和树（一）</title>
+</head>
+<body>
+<div class="title">任务七：JavaScript和树（一）</div>
+<div class="one">
+    <div class="two">
+        <div class="three">
+            <div class="four"></div>
+            <div class="four"></div>
+        </div>
+        <div class="three">
+            <div class="four"></div>
+            <div class="four"></div>
+        </div>
+    </div>
+    <div class="two">
+        <div class="three">
+            <div class="four"></div>
+            <div class="four"></div>
+        </div>
+        <div class="three">
+            <div class="four"></div>
+            <div class="four"></div>
+        </div>
+    </div>
+</div>
+<ul class="btn-list" id="btn">
+    <button  class="btn" id="pre">先序</button>
+    <button  class="btn"id="in">中序</button>
+    <button  class="btn" id="post">后序</button>
+</ul>
+</body>
+<script src="js/index.js"></script>
+</html>

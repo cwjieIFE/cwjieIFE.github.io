@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        * { margin: 0; padding: 0;}
+        body {background-color: #fff;}
+        body div {
+            border: 2px solid #000;
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            padding: 0 5px;
+            margin: 20px 5px;
+        }
+        .one {
+
+            margin: 20px auto;
+        }
+        .two{
+            display: flex;
+        }
+        .three{
+            display: flex;
+        }
+        .four{
+            display: flex;
+        }
+        .five{
+            display: flex;
+        }
+        .title{
+            background:#eee;
+        }
+        .btn-list{
+            text-align: center;
+        }
+
+        .width6{
+            flex: 6;
+        }
+        .width5{
+            flex: 5;
+        }
+        .width1{
+            flex: 1;
+        }.width2{
+            flex: 2;
+        }.width4{
+             flex: 4;
+         }
+        #input_container{
+            width:500px;
+            margin-bottom:0px;
+        }
+        input[name='optionsRadios']{
+            margin: 10px 20px 0;
+        }
+        div.one:hover,div.one div:hover{
+            cursor: pointer;
+        }
+    </style>
+    <title>任务九：JavaScript和树（三）</title>
+</head>
+<body>
+<div class="title">任务九：JavaScript和树（三）</div>
+<div class="one tree">1
+    <div class="two width6 tree">2
+        <div class="three width5 tree">5
+            <div class="four width1 tree">10</div>
+            <div class="four width1 tree">11</div>
+            <div class="four width1 tree">12</div>
+            <div class="four width1 tree">13</div>
+        </div>
+        <div class="three width1 tree">6</div>
+        <div class="three width2 tree">7
+            <div class="four width1 tree">14</div>
+            <div class="four width1 tree">15</div>
+        </div>
+    </div>
+    <div class="two width5">3
+        <div class="three width1">8
+            <div class="four width1">16</div>
+            <div class="four width1">17</div>
+            <div class="four width1">18</div>
+        </div>
+        <div class="three width1 tree">9
+            <div class="four width4 tree">19
+                <div class="five width1 tree">21</div>
+            </div>
+            <div class="four width1 tree">20</div>
+        </div>
+    </div>
+    <div class="two width1">4
+
+    </div>
+</div>
+<ul class="btn-list" id="btn">
+    <div class="Buttonlist" style="border:none;">
+        <lable style="line-height:34px;margin-right:30px;">按钮</lable>
+        <input type="radio" name="optionsRadios" id="preradio" value="option1" checked>
+        <button  class="btn" id="pre">先序</button>
+        <input type="radio" name="optionsRadios" id="postradio" value="option1" >
+        <button  class="btn" id="post">后序</button>
+    </div>
+    <div style="border:none;">
+        <input id="input_container"  class="form-control" type="text" >
+        <input class="btn" type="button" id="search" value="查找">
+        <input class="btn" type="button" id="add" value="增加">
+        <input class="btn" type="button" id="delete" value="删除">
+    </div>
+</ul>
+</body>
+<script src="js/index.js"></script>
+</html>

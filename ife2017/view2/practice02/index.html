@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>任务一：零基础JavaScript编码（二）</title>
+</head>
+<body>
+<div class="title">任务一：零基础JavaScript编码（二）</div>
+<div class="content">
+    <h3>污染城市列表</h3>
+    <ul id="aqi-list">
+        <!--
+            <li>第一名：福州（样例），10</li>
+              <li>第二名：福州（样例），10</li> -->
+    </ul>
+</div>
+
+
+<script type="text/javascript">
+
+    var aqiData = [
+        ["北京", 90],
+        ["上海", 50],
+        ["福州", 10],
+        ["广州", 50],
+        ["成都", 90],
+        ["西安", 100]
+    ];
+
+    (function () {
+
+        /*
+         在注释下方编写代码
+         filter   将匹配元素集合缩减为匹配指定选择器的元素。
+         sort() 方法用于对数组的元素进行排序。
+         */
+        var str="";
+        var ranking=["第一名","第二名","第三名","第四名","第五名","第六名"];
+        var outputData=aqiData.filter(function(value){
+            return value[1]>60;
+        }).sort(function(a,b){
+            return b[1]-a[1];
+        });
+        outputData.forEach(function(value,index){
+            str+="<li>"+ranking[index]+"："+value[0]+"，"+value[1]+"</li>";
+        });
+        document.getElementById("aqi-list").innerHTML=str;
+    })();
+
+</script>
+</body>
+</html>

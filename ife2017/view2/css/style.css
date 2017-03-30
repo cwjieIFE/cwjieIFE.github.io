@@ -1,0 +1,109 @@
+.title {
+    font-size: 30px;font-weight: bold;margin-top:200px;text-align: center
+}
+.content{
+    margin:auto;position: absolute;top:0;left:0;bottom:0;right:0;width:300px;height:200px;
+}
+.content1{
+width:500px;
+height:180px;
+position: relative;
+}
+.content1_left{
+    position: absolute;
+    left:0;top:0
+}
+.content1_right{
+    position: absolute;
+    right:0;top:0
+}
+#sort-btn, .btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+#sort-btn{
+    position: absolute;
+    right:0;
+    bottom:0;
+}
+.content2{
+    margin-top:20px;
+}
+.list li{
+    list-style: none;
+    display:inline-block;
+    width:50px;
+    height:50px;
+    line-height:50px;
+    text-align: center;
+    font-size:24px;
+    color:#fff;
+    background:red;
+    margin-left:2px;
+    cursor: pointer;
+}
+.lists{
+    display: -webkit-flex;
+    display: flex;
+    width: 500px;
+    height: 150px;
+    align-items: flex-end;
+}
+.lists  div {
+    width: 5px;
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    padding: 0 15px;
+    margin: 2px 0;
+    margin-right: 10px;
+    height: 50px;
+    line-height: 50px;
+    background-color: red;
+    color: #FFFFFF;
+    text-align: center;
+
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 20px;
+    padding: 6px 12px;
+    font-size: 14px;
+    margin-bottom:10px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    color: #555;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+#task7 {
+
+}

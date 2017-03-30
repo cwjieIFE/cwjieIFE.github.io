@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+
+    display: block;
+    background:#dedede;
+}
+.header{
+    width:100%;
+    height:65px;
+    background:#444444;
+}
+.clearfix {
+    clear: both;
+}
+
+.logo {
+    float: left;
+    margin-left: 40px;
+    margin-top: 10px;
+    width: 120px;
+}
+.nav{
+    float: right;
+    line-height:65px;
+    height:100%;
+    margin-right:30px;
+}
+.nav ul li{
+    float: left;
+    margin-left:20px;
+}
+.nav ul li a{
+    margin-left:10px;
+    color:#fff;
+}
+.nav  > ul > li:before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #000;
+    position: absolute;
+    top: 30px;
+
+}
+.content{
+    margin:18px;
+}
+.content{
+    margin: 18px 400px 18px 18px;
+    min-height: 100px;
+}
+.artical{
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px #888;
+    margin-bottom: 20px;
+}
+.artical > h1 {
+      font-size: 28px;
+      line-height: 1.5;
+  }
+.artical > h2 {
+    font-size: 20px;
+    line-height: 2.5;
+    color: #777;
+}
+p.author_time{
+    font-size:10px;
+    color:#777;
+    margin-bottom:20px;
+}
+.artical img{
+    max-width:100%;
+
+}
+.artical  .articlas {
+    margin-top: 10px;
+    line-height: 1.5;
+    text-indent: 2em;
+    color:#010000;
+    margin-bottom:20px;
+}
+.artical ul {
+    margin-left:20px;
+}
+.artical .img_List li{
+    margin-bottom: 15px;
+    line-height: 1.5;
+    width: 122px;
+    height: 126px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    float: left;
+    margin-left:20px;
+}
+.artical .img_List li > p {
+    font-size: 12px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.artical .img_List li > img {
+    width: 100%;
+}
+.artical ol {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    list-style-type: decimal;
+}
+.artical ol li{
+    color:#0e0000;
+
+}
+.artical >table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.artical >table thead tr th{
+    background:#000;
+    color:#fff;
+}
+.artical >table tr:last-of-type {
+    background-color: #bbb;
+    font-weight: bold;
+}
+.artical >table td {
+    padding: 5px;
+}
+.content-right{
+    width:364px;
+    height:auto;
+    padding: 20px;
+    margin-bottom: 20px;
+    float: right;
+}
+
+.footer .formTitle{
+    line-height: 1.5;
+    padding-left: 15px;
+    border-left: 3px solid #ccc;
+    color: #000;
+    font-size: 17px;
+}
+.footer form{
+    width:100%;
+}
+
+.footer > form > div {
+    margin: 15px 0px;
+}
+
+.footer> form > div > label {
+    display: inline-block;
+    margin-right: 0.5%;
+    width: 35%;
+    text-align: right;
+    vertical-align: top;
+}
+.footer > form >span {
+    margin-left: 35.5%;
+    font-size: 13px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+.footer > form > div > textarea {
+    width: 45%;
+    height: 200px;
+}
+.btn {
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    color: #fff;
+    height: 45px;
+    background-color: #3355d0;
+    border: none;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: .5s;
+    cursor: pointer;
+    box-shadow: 0 0 2px #3355d0;
+}
+.footer_bottom{
+    width:100%;
+    height:70px;
+    line-height:70px;
+    text-align:center;
+    background:#000;
+}
+.footer_bottom p
+{
+    color:#fff;
+}

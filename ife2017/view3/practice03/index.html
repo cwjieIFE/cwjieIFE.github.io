@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .content{
+            background:#eee;
+            border:1px solid #999;
+            margin:20px;
+            padding:20px;
+        }
+        .content1{
+            width: 200px;
+            padding: 20px;
+            border: 1px solid #999;
+            float: left;
+            background: #fff;
+            display: inline;
+        }
+        .content1 .logo{
+            width:80px;
+            height:80px;
+            border:1px solid #999;
+            background:#DFDFDF;
+            float: left;
+        }
+        .content1 .title{
+            float: right;
+        }
+        .content3 {
+            width: 80px;
+            padding: 20px;
+            float: right;
+            background: #fff;
+            display: inline;
+            border: 1px solid #999;
+        }
+        .content3_list{
+            width:80px;
+            height:80px;
+            border:1px solid #999;
+            background:#DFDFDF;
+            margin-top:20px;
+        }
+        .content2{
+            padding: 20px;
+            border: 1px solid #999;
+            margin-left: 260px;
+            margin-right: 180px;
+            background: #fff;
+            min-width: 300px;
+            width: auto;
+        }
+        p{
+            font-size:20px;
+            line-height:30px;
+        }
+        .clearfix {
+            clear: both;
+        }
+    </style>
+    <title>任务三：三栏式布局</title>
+</head>
+<body>
+    <div class="content">
+        <div class="content1">
+            <div class="logo"></div>
+            <div class="title">团队名称</div>
+        </div>
+        <div class="content3">
+            <div class="content3_list"></div>
+            <div class="content3_list"></div>
+            <div class="content3_list"></div>
+            <div class="content3_list"></div>
+
+        </div>
+        <div class="content2">
+          <p>
+                任务描述
+            使用 HTML 与 CSS 按照 示例图（点击查看） 实现三栏式布局。
+            左右两栏宽度固定，中间一栏根据父元素宽度填充满，最外面的框应理解为浏览器。背景色为 #eee 区域的高度取决于三个子元素中最高的高度。</p>
+            <p>任务注意事项
+            尝试 position 和 float 的效果，思考它们的异同和应用场景。
+            注意测试不同情况，尤其是极端情况下的效果。
+            图片和文字内容请自行替换，尽可能体现团队的特色。
+            调节浏览器宽度，固定宽度和自适应宽度的效果始终符合预期。
+            改变中间一栏的内容长度，以确保在中间一栏较高和右边一栏较高时，父元素的高度始终为子元素中最高的高度。
+            其他效果图中给出的标识均被正确地实现。</p>
+
+            <p>参考资料
+            MDN：position：了解 CSS position 属性的基本知识
+            MDN：float：了解 CSS float 属性的基本知识
+            Learn CSS Positioning in Ten Steps：通过具体的例子熟悉 position 属性
+            清除浮动（clearfix hack）：清除浮动是什么，如何简单地清除浮动
+            StackOverflow：Which method of ‘clearfix’ is best?：清除浮动黑科技完整解读</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</body>
+</html>

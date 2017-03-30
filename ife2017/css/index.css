@@ -24,6 +24,35 @@ body
 {
     width:100%
 }
+.container{
+    width:100%;
+    height:auto;
+}
+.container .links{
+    width:80%;
+    margin:0 auto;
+    position: relative;
+    top:20px;
+}
+.container .lists{
+    width:98%;
+    margin:0 auto;
+    position: relative;
+    top:20px;
+}
+
+.container .links a{
+    display:inline-block;
+    text-align: center;
+    width:300px;
+    height:50px;
+    line-height:50px;
+    background:#eee;
+    text-decoration: none;
+    border:1px solid #ccc;
+
+}
+
 .cardbox{
     display: -webkit-box;
     display: -webkit-flex;
@@ -43,7 +72,7 @@ body
     -ms-flex-align: center;
     align-items: center;
     padding: 30px;
-    margin: 20px;
+    margin: 15px 45px;
     color: #324057;
     -webkit-box-shadow: 0 0 3px 2px rgba(0,0,0,.36);
     -moz-box-shadow: 0 0 3px 2px rgba(0,0,0,.36);
