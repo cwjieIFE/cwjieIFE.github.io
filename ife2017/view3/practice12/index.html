@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>任务十二：学习CSS 3的新特性</title>
+    <style>
+        .color-table tr + tr:nth-child(odd) {
+            background-color: #ccc;
+        }
+        .color-table tr + tr:nth-child(-n+4) {
+            color: red;
+        }
+
+        .color-table tr:first-child {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .text {
+            margin: 40px 40px;
+            -webkit-transition:all 1s ease 0s;
+            -moz-transition: all 1s ease 0s ;
+            -ms-transition: all 1s ease 0s ;
+            -o-transition: all 1s ease 0s ;
+            transition: all 1s ease 0s ;
+            width: 8%;
+        }
+        .text:focus {
+            width: 12%;
+            margin: 40px 20px;
+            -webkit-transition:all 1s ease 0s;
+            transition:all 1s ease 0s;
+            -webkit-transform: translateY(50px);
+            -moz-transform: translateY(50px);
+            -ms-transform: translateY(50px);
+            -o-transform: translateY(50px);
+            transform: translateY(50px);
+            border:1px solid blue;
+            box-shadow: 0px 0px 1px blue;
+        }
+        .labels > a:link,
+        .labels > a:hover,
+        .labels > a:visited {
+            color: #ccc;
+            text-decoration: none;
+        }
+        .slides {
+            margin-top:50px;
+            position: relative;
+            width: 350px;
+            height: 140px;
+            overflow: hidden;
+            background-color: #ccc;
+        }
+
+        .slide-wrap {
+            position: relative;
+            width: 300%;
+            height: 100%;
+            transition: left .8s ease;
+        }
+
+        .slide {
+            float: left;
+            width: 33.3%;
+            height: 100%;
+        }
+
+        .slide:first-child {
+            background-color: red;
+        }
+
+        .slide:nth-child(2) {
+            background-color: blue;
+        }
+
+        .slide:nth-child(3) {
+            background-color: green;
+        }
+
+        #slide1:target ~ .slide-wrap {
+            left: 0;
+        }
+
+        #slide2:target ~ .slide-wrap {
+            left: -100%;
+        }
+
+        #slide3:target ~ .slide-wrap {
+            left: -200%;
+        }
+
+        .labels {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        .labels > a {
+            display: block;
+            width: 30px;
+            height: 30px;
+            float: left;
+            line-height: 30px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, .2);
+            border: 1px solid transparent;
+        }
+
+    </style>
+</head>
+
+<body>
+<table class="color-table">
+    <tr>
+        <th>排名</th>
+        <th>网站</th>
+        <th>热度</th>
+    </tr>
+    <tr>
+        <td>1.</td>
+        <td>百度前端技术学院</td>
+        <td>13000</td>
+    </tr>
+    <tr>
+        <td>2.</td>
+        <td>百度前端技术学院</td>
+        <td>12000</td>
+    </tr>
+    <tr>
+        <td>3.</td>
+        <td>百度前端技术学院</td>
+        <td>11000</td>
+    </tr>
+    <tr>
+        <td>4.</td>
+        <td>百度前端技术学院</td>
+        <td>10000</td>
+    </tr>
+    <tr>
+        <td>5.</td>
+        <td>百度前端技术学院</td>
+        <td>9000</td>
+    </tr>
+    <tr>
+        <td>6.</td>
+        <td>百度前端技术学院</td>
+        <td>8000</td>
+    </tr>
+    <tr>
+        <td>7.</td>
+        <td>百度前端技术学院</td>
+        <td>7000</td>
+    </tr>
+    <tr>
+        <td>8.</td>
+        <td>百度前端技术学院</td>
+        <td>6000</td>
+    </tr>
+    <tr>
+        <td>9.</td>
+        <td>百度前端技术学院</td>
+        <td>5000</td>
+    </tr>
+    <tr>
+        <td>10.</td>
+        <td>百度前端技术学院</td>
+        <td>4000</td>
+    </tr>
+</table>
+
+<input type="text" class="text">
+
+<div class="slides">
+    <span id="slide1" hidden></span>
+    <span id="slide2" hidden></span>
+    <span id="slide3" hidden></span>
+    <div class="slide-wrap">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+    </div>
+    <div class="labels">
+        <a href="#slide1">1</a>
+        <a href="#slide2">2</a>
+        <a href="#slide3">3</a>
+    </div>
+</div>
+
+</body>
+
+</html>
