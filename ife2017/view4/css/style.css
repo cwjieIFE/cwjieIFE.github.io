@@ -41,6 +41,12 @@ body {
 .text-center{
     text-align: center;
 }
+.fl_left{
+    float: left;
+}
+.fl_right{
+    float: right;
+}
 .form-group .control-label {
     padding-top: 7px;
     margin-bottom: 0;

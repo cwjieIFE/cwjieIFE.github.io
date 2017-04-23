@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>任务五：听指令的小方块（二）</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .clear_border {
+            border: none;
+        }
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        td {
+            font-family: Microsoft Yahei;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid #eee;
+            width: 50px;
+            height: 50px;
+            box-sizing: border-box;
+        }
+
+        .machine-box {
+            transition: all .8s;
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            transform: rotate(0deg);
+            background: url(box.png) no-repeat 40% 40%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="col-md-6 " style="padding:0;margin:0;">
+    <table id="table"></table>
+    <div class="machine-box" id="machine_box"></div>
+    <select class="form-control col-md-3" id="comand_input">
+        <option>TRA LEF</option>
+        <option>TRA TOP</option>
+        <option>TRA RIG</option>
+        <option>TRA BOT</option>
+        <option>MOV LEF</option>
+        <option>MOV TOP</option>
+        <option>MOV RIG</option>
+        <option>MOV BOT</option>
+    </select>
+    <input type="button" class="btn btn-primary" id="comand_button" value="执行">
+</div>
+<pre class="col-md-6">
+    命令:
+    TRA LEF：向屏幕的左侧移动一格，方向不变
+    TRA TOP：向屏幕的上面移动一格，方向不变
+    TRA RIG：向屏幕的右侧移动一格，方向不变
+    TRA BOT：向屏幕的下面移动一格，方向不变
+    MOV LEF：方向转向屏幕左侧，并向屏幕的左侧移动一格
+    MOV TOP：方向转向屏幕上面，向屏幕的上面移动一格
+    MOV RIG：方向转向屏幕右侧，向屏幕的右侧移动一格
+    MOV BOT：方向转向屏幕下面，向屏幕的下面移动一格
+</pre>
+</body>
+<script src="task.js"></script>
+</html>
