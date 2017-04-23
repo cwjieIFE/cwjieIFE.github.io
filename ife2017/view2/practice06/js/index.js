@@ -9,16 +9,15 @@ var  Stacks = function(element,data){
     this.element = element;
     this.data = data
     //输入
-        this.input_container = document.getElementById('input_container'),
-        this.left_in = document.getElementById('left_in'),
-        this.right_in = document.getElementById('right_in'),
-        this.left_out = document.getElementById('left_out'),
-        this.right_out = document.getElementById('right_out'),
-        this.list = document.getElementById('list'),
-        this.input_search = document.getElementById('input-search'),
-        this.search = document.getElementById('input_search'),
-
-        this.data_content = document.querySelector('.content ul');
+    this.input_container = document.getElementById('input_container'),
+    this.left_in = document.getElementById('left_in'),
+    this.right_in = document.getElementById('right_in'),
+    this.left_out = document.getElementById('left_out'),
+    this.right_out = document.getElementById('right_out'),
+    this.list = document.getElementById('list'),
+    this.input_search = document.getElementById('input-search'),
+    this.search = document.getElementById('input_search'),
+    this.data_content = document.querySelector('.content ul');
 }
 Stacks.prototype = {
     init:function(obj){

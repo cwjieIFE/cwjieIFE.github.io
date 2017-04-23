@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .container{
+            min-height:400px;
+        }
+    </style>
+    <title>任务二：表单（二）多个表单项的动态校验</title>
+</head>
+<body>
+<div style="font-size: 30px;font-weight: bold;margin-top:200px;text-align: center">任务二：表单（二）多个表单项的动态校验</div>
+    <div class="container">
+        <form action="">
+            <div class="form-group ">
+                <label for="inputname" class="col-md-3 control-label">名称</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" id="inputname" placeholder="名称">
+                </div>
+                <span  class="prompt"  >必填，长度为4~16个字符</span>
+            </div>
+            <div class="form-group ">
+                <label for="inputname1" class="col-md-3 control-label">密码</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" id="inputname1" placeholder="密码">
+                </div>
+                <span  class="prompt">必填，长度为4~16个字符</span>
+            </div>
+            <div class="form-group">
+                <label for="inputname2" class="col-md-3 control-label">密码确认</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" id="inputname2" placeholder="密码确认">
+                </div>
+                <span  class="prompt">必填，长度为4~16个字符</span>
+            </div>
+            <div class="form-group">
+                <label for="inputname2" class="col-md-3 control-label">邮箱</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" id="inputname3" placeholder="邮箱">
+                </div>
+                <span  class="prompt">必填</span>
+            </div>
+            <div class="form-group">
+                <label for="inputname2" class="col-md-3 control-label">手机号码</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" id="inputname4" placeholder="手机号码">
+                </div>
+                <span  class="prompt">必填，长度为11个数字</span>
+            </div>
+            <div style="float: right;">  <button type="button" class="btn btn-primary" id="button" >提交</button></div>
+        </form>
+    </div>
+</body>
+<script src="js/index.js"></script>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>表单（三）联动</title>
+    <style type="text/css">
+        #Nstudents_group {
+            display: none;
+        }
+        .container{
+         width:80%;
+            height:auto;
+            margin-top:300px;
+        }
+        .form-group label{
+            font-size:16px;
+            font-weight:600;
+        }
+
+    </style>
+</head>
+
+<body>
+<div style="font-size: 30px;font-weight: bold;margin-top:200px;text-align: center">任务三：表单（三）联动</div>
+<div class="container">
+    <form action="">
+        <div class="form-group">
+                <div class="col-md-2 text-right">
+                    <input type="radio"  id="Ystudents" value="Ystudents" name="students" placeholder="name" checked onclick="CheckRadio();">
+                </div>
+                <label for="Ystudents" class="col-md-1">在校生</label>
+                <div class="col-md-1 text-right">
+                    <input type="radio"  id="Nstudents" value="Nstudents"   name="students" placeholder="name" onclick="CheckRadio();">
+                </div>
+                <label for="Nstudents" class="col-md-2 ">非在校生</label>
+        </div>
+        <div class="form-group" id="Ystudents_group">
+            <label class="col-md-2 text-right" for="city">学校</label>
+            <div class="col-md-4">
+                <select id="city" class="form-control"  onchange="change(this)">
+                    <option value="hebei">河北</option>
+                    <option value="beijing">北京</option>
+                </select>
+            </div>
+            <div class="col-md-4" >
+                <select  class="form-control" id="deselect">
+                    <option value="shanghai">燕山大学</option>
+                    <option value="beijing">河北科技师范学院</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group" id="Nstudents_group">
+            <label for="company" class="col-md-2 text-right">就业单位</label>
+            <div class="col-md-8" >
+                <select id="company" class="form-control ">
+                <option value="百度">百度</option>
+                <option value="阿里">阿里</option>
+                <option value="阿里">京东</option>
+                </select>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+        var Ystudents_group = document.getElementById("Ystudents_group");
+        var Nstudents_group = document.getElementById("Nstudents_group");
+        var showdata = [];
+        var valuedata = [];
+        showdata[0] = [];
+        valuedata[0] = [];
+        showdata[0][0] = "燕山大学";
+        valuedata[0][0] = "0101";
+        showdata[0][1] = "河北科技师范学院";
+        valuedata[0][1] = "0102";
+        showdata[1] = [];
+        valuedata[1] = [];
+        showdata[1][0] = "清华大学";
+        valuedata[1][0] = "0201";
+        showdata[1][1] = "北京大学";
+        valuedata[1][1] = "0202";
+        function CheckRadio() {
+            var radioStudens = document.getElementsByName("students");
+            for (var i = 0; i < radioStudens.length; i++) {
+                if (radioStudens[i].checked == true) {
+                    var newName = radioStudens[i].value + "_group";
+                    if (newName == "Ystudents_group") {
+                        Ystudents_group.style.display = "block";
+                        Nstudents_group.style.display = "none";
+                    } else {
+                        Ystudents_group.style.display = "none";
+                        Nstudents_group.style.display = "block";
+                    }
+                }
+            }
+        }
+        function change(target) {
+            var deselect = document.getElementById("deselect");
+            console.log(deselect);
+            deselect.innerHTML =null;
+            var m = target.selectedIndex;
+            if (m >= 0) {
+                for (var i = 0; i < showdata[m].length; i++) {
+                    deselect.options[i] = new Option(showdata[m][i], valuedata[m][i]);
+                }
+                deselect.options[0].selected = true;
+            }
+        }
+</script>
+</body>
+
+</html>

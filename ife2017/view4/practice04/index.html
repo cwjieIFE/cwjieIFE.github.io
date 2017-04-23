@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>任务四：听指令的小方块（一）</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .clear_border {
+            border: none;
+        }
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        td {
+            font-family: Microsoft Yahei;
+            text-align: center;
+            font-weight: bold;
+            border: 1px solid #eee;
+            width: 50px;
+            height: 50px;
+            box-sizing: border-box;
+        }
+        .blank {
+            border: none;
+        }
+        .machine-box {
+            transition: all .8s;
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            transform: rotate(0deg);
+            background: url(box.png) no-repeat 40% 40%;
+        }
+    </style>
+</head>
+<body>
+<table id="table"></table>
+<div class="machine-box" id="machine_box"></div>
+<select class="form-control col-md-3" id="comand_input">
+    <option>GO</option>
+    <option>TUN LEF</option>
+    <option>TUN RIG</option>
+    <option>TUN BAC</option>
+</select>
+<input type="button" class="btn btn-primary" id="comand_button" value="执行">
+<pre>
+    命令:
+    GO：向蓝色边所面向的方向前进一格（一格等同于正方形的边长）
+    TUN LEF：向左转（逆时针旋转90度）
+    TUN RIG：向右转（顺时针旋转90度）
+    TUN BAC：向右转（旋转180度）
+</pre>
+</body>
+<script src="task.js"></script>
+</html>

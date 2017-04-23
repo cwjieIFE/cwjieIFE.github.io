@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>任务一：表单（一）单个表单项的检验</title>
+</head>
+<body>
+<div style="font-size: 30px;font-weight: bold;margin-top:200px;text-align: center">任务一：表单（一）单个表单项的检验</div>
+    <div class="container">
+        <form action="">
+            <div class="form-group">
+                <label for="inputname" class="col-md-3 control-label">名称</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" id="inputname" placeholder="name">
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-primary" id="button">验证</button>
+                </div>
+                <p id="prompt">必填，长度为4~16个字符</p>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    //获取的ID值
+    var input_name = document.getElementById("inputname");
+    var Btn = document.getElementById("button");
+    var promptLabel = document.getElementById("prompt");
+
+    //规则
+
+    var RegYchinese = /[\u4E00-\u9FA5]/g;//汉字
+    var regNchinese = /[^\u4E00-\u9FA5\uf900-\ufa2d]/g; //匹配非中文
+    var Regtrim = /^\s+|\s+$/g;  // 删除字符串两侧的空白字符
+
+    Btn.addEventListener("click",function(){
+
+            var input_value =  input_name.value;
+        //计算长度
+        var length = input_value.replace(Regtrim,'').replace(RegYchinese, '').length +  input_value.replace(Regtrim,'').replace(regNchinese,'').length;
+
+        if(length==0){
+            input_name.style.border="1px solid red";
+            promptLabel.innerHTML= '名称不能为空';
+            promptLabel.style.color = "#DE0012";
+        }else if(length>=4&&length<=16){
+            input_name.style.border="1px solid green";
+            promptLabel.innerHTML= '名称格式正确';
+            promptLabel.style.color = "green";
+        }else{
+            input_name.style.border="1px solid red";
+            promptLabel.innerHTML= '必填，长度为4~16个字符';
+            promptLabel.style.color = "#DE0012";
+        }
+
+
+
+    })
+
+
+</script>
+</html>
